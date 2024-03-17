@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="number"],
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    .form-group input[type="file"] {
+        margin-top: 5px;
+    }
+    .form-group input[type="radio"],
+    .form-group input[type="checkbox"] {
+        margin-right: 5px;
+    }
+    .submit-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .navigation {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .navigation a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    .navigation a:hover {
+        text-decoration: underline;
+    }
+    #gender{
+        display: flex;
+    }
+    #courses{
+        display: flex;
+    }
+</style>
+</head>
+<body>
+
+    <form action="/insert" method="post">
+
+<div class="header">
+    <h1>Create Employee</h1>
+</div>
+
+<div class="form-container">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile No.</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <select id="designation" name="designation">
+                <option value="hr">HR</option>
+                <option value="manager">Manager</option>
+                <option value="sales">Sales</option>
+            </select>
+        </div>
+        <div class="form-group" id="gender">
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="form-group" id="courses">
+            <label>Courses</label>
+            <input type="checkbox" id="mca" name="courses[]" value="mca">
+            <label for="mca">MCA</label>
+            <input type="checkbox" id="bca" name="courses[]" value="bca">
+            <label for="bca">BCA</label>
+            <input type="checkbox" id="bsc" name="courses[]" value="bsc">
+            <label for="bsc">BSC</label>
+        </div>
+        <div class="form-group">
+            <label for="profile_pic">Upload Profile Picture</label>
+            <input type="file" id="profile_pic" name="profile_pic">
+        </div>
+        
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

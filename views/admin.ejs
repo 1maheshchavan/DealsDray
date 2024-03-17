@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    .navigation {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .navigation a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    .navigation a:hover {
+        text-decoration: underline;
+    }
+   
+</style>
+</head>
+<body>
+   
+        <form action="/insert" method="post">
+           
+<div class="header">
+    <h1>Welcome to the Admin Panel</h1>
+</div>
+
+<div class="navigation">
+    <a href="/">Home</a>
+    <a href="/createemploye.ejs" class="btn btn-primary">Create Employee</a>
+    <a href="/employeedata.ejs" class="btn btn-primary">Employee List</a>
+    <div>
+        <a href="#">Mahesh Chavan</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee List</title>
+
+<script src="https://kit.fontawesome.com/fab4acbac9.js"
+crossorigin="anonymous"
+></script>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .navigation {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .navigation a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    .navigation a:hover {
+        text-decoration: underline;
+    }
+
+</style>
+</head>
+<body>
+
+<h2>Employee List</h2>
+<form action="/insert" method="post">
+
+<div class="navigation">
+    <a href="/">Home</a>
+    <a href="/employeeedit.ejs">Employee Edit</a>
+</div>
+<table>
+  <tr>
+    <th>Unique Id</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile No.</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><img src="employee1.jpg" alt="Employee Image" style="width:50px;height:50px;"></td>
+    <td>Hukum</td>
+    <td>hcgupta@cstech.in</td>
+    <td>954010044</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
